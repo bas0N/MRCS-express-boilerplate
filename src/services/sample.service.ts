@@ -1,4 +1,4 @@
-import { generateResult } from "handlin";
+import { generateResponse } from "handlin";
 
 export const getSampleData = async () => {
   const sampleObject = {
@@ -12,5 +12,10 @@ export const getSampleData = async () => {
     latitude: -5.729996,
     longitude: -124.290946,
   };
-  return generateResult({ code: 200, data: sampleObject });
+  return generateResponse({
+    code: 200,
+    message: "Data retrieved succesfully!",
+    success: true,
+    data: sampleObject,
+  });
 };
